@@ -1,27 +1,34 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Gatsby Try",
+    siteUrl: 'https://www.yourdomain.tld',
+    title: 'Gatsby First Try',
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
+    'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sharp',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/blog`,
+      },
     },
   ],
 };
